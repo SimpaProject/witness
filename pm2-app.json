@@ -1,0 +1,17 @@
+[{
+  "name"        : "explorer",
+  "script"      : "explorer.js",
+  "exec_mode"   : "cluster",
+  "pid_file"    : "/home/apps/.pm2/pids/explorer.pid",
+  "watch"       : true,
+  "autorestart" : true,
+  "instances"   : 1
+},{
+  "name"        : "explorer-tn",
+  "script"      : "explorer.js",
+  "pid_file"    : "/home/experimental/.pm2/pids/explorer-tn.pid",
+  "exec_mode"   : "cluster",
+  "watch"       : true,
+  "autorestart" : true,
+  "instances"   : 1
+}]

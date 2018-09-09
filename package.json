@@ -1,0 +1,46 @@
+{
+  "name": "explorer",
+  "description": "simpa explorer",
+  "author": "Simpa",
+  "version": "0.1.0",
+  "main": "start.js",
+  "keywords": [
+    "explorer",
+    "Simpa"
+  ],
+  "scripts": {
+    "pretest": "npm run eslint",
+    "eslint": "./node_modules/eslint/bin/eslint.js --cache ./src",
+    "testnet": "./scripts/prepare.sh testnet",
+    "livenet": "./scripts/prepare.sh livenet",
+    "start": "node explorer.js",
+    "minjs": "gulp"
+  },
+  "license": "MIT",
+  "repository": {
+    "url": "git://github.com/SimpaProject/SimpaCore.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/dagcoin/explorer/issues"
+  },
+  "browser": {
+    "request": "browser-request",
+    "secp256k1": "secp256k1/js"
+  },
+  "dependencies": {
+    "async": "^2.1.5",
+    "core": "git+https://github.com/SimpaProject/SimpaCore.git",
+    "express": "^4.14.0",
+    "moment": "^2.17.1",
+    "socket.io": "^1.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.5.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}
